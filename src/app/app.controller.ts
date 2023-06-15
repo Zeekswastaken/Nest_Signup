@@ -22,7 +22,7 @@ export class AppController {
   @Get('signin')
   getSignin(@Res() res: Response) {
     // const filePath = join(__dirname, '..', 'pages', 'signin.html');
-    res.sendFile("/app/pages/signin.html");
+    res.sendFile("../pages/signin.html");
   }
   @Post('signin')
   async handleSignIn(@Body() formData: any, @Res() res: Response) {
