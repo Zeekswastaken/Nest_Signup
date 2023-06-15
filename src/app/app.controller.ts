@@ -30,7 +30,7 @@ export class AppController {
     const credentialsMatch = await this.appService.compareCredentials(username, password);
   
     if (credentialsMatch) {
-      res.sendFile("/app/pages/index.html");
+      res.sendFile("../pages/index.html");
     } else {
       console.log("YOU AIN'T GOING ANYWHERE DUMBASS");
       // Credentials are incorrect
@@ -42,7 +42,7 @@ export class AppController {
   @Get('signup')
   getSignup(@Res() res: Response) {
     // const filePath = join(__dirname, '..', 'pages', 'signin.html');
-    res.sendFile("/app/pages/signup.html");
+    res.sendFile("../pages/signup.html");
   }
 
 
